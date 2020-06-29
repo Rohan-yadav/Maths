@@ -1,0 +1,23 @@
+# Maths
+C++ code for different mathematical operations
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main() {
+double x = 10.5, sum = 1, term = 1,a=0;
+//float term1 = exp((double)0.5);
+double rn =1;
+double den = 1;
+int n = 0;
+//y=exp(x);
+while (rn >pow(10,-12)) {
+den=den*(n+1);
+rn = (exp(x)*pow((x-a),(n+1)))/den;
+++n;
+term = (term * (x-a) / n);
+sum = sum + term;
+cout<<"n="<<n<<" Term="<<term<<" sum= "<<sum<<endl;
+}
+cout<<"exact value = "<< exp((double)x);
+return 0;
+}
